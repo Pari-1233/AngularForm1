@@ -1,0 +1,61 @@
+<body>
+<div class="container">
+  <!--Employee details form-->
+  <i>
+   <u>
+     <h2>Employee details</h2>
+    </u>
+  </i>
+  <!--Form submitting with onsubmit function-->
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)" ngNativeValidate>
+    <div class="form-group">
+      <!--Experience text field-->
+      <label for="exp">Experience: </label>
+      <input id="exp" name="exp" class="form-control" type="number" min="2" max="20" [(ngModel)]="showEmployee.exp" required/>
+    </div>
+    <br>
+    <!--Qualification Radio selection-->
+    <label for="qualification">Qualification: </label>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="qualification" id="CourseBtech" value="Btech" [(ngModel)]="showEmployee.qualification" checked required>
+        <label class="form-check-label" for="CourseBtech">B.tech</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="qualification" id="CourseMtech" value="Mtech" [(ngModel)]="showEmployee.qualification" checked required>
+        <label class="form-check-label" for="CourseMtech">Mtech</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="qualification" id="CourseBba" value="Bba" [(ngModel)]="showEmployee.qualification" checked required>
+        <label class="form-check-label" for="CourseBba">BBa</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="qualification" id="CourseBCa" value="BCA" [(ngModel)]="showEmployee.qualification"checked required>
+        <label class="form-check-label" for="CourseBCA">BCA</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="qualification" id="CourseMca" value="Mca" [(ngModel)]="showEmployee.qualification" checked required>
+        <label class="form-check-label" for="CourseMca">Mca</label>
+      </div>
+    </div>
+    <br>
+    <!--Selecting Languages-->
+    <div class="form-group">
+      <label for="language">Languages </label>
+      <select class="form-control" name="language" id="language" [(ngModel)]="showEmployee.language" required>
+        <option>--select--</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>Java</option>
+        <option>Python</option>
+        <option>C#</option>
+        <option>Javascript</option>
+        <option>Angular</option>
+      </select>
+    </div>
+    <br>
+    <!--button form submitting form -->
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
