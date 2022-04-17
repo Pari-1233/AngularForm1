@@ -10,7 +10,16 @@ export class EmployeeComponent implements OnInit {
   showEmployee : Employee = {
     language: [],
     qualification: [],
-    exp: 0
+    exp: null,
+    Id: 0,
+    FirstName: '',
+    LastName: '',
+    Password: '',
+    Email: '',
+    Gender: '',
+    Phone: '',
+    UserName: '',
+    Address: ''
   }
   /*copying from data */
   ShowEmployee : Employee = {...this.showEmployee}
